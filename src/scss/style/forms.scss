@@ -1,15 +1,29 @@
-
 @import '../assets/colors';
 @import '../assets/mixins';
 @import '../assets/variables';
+
+
+.subject-field {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.form {}
+
+.field.required {}
+
+.field_name {}
+
+.form-bottom {}
 
 // Сообщение об ошибке заполнения поля
 label.invalid {
   position: absolute;
   left: 0;
-  bottom: -20px;
+  bottom: -17.5px;
   font: normal 10px/150% sans-serif;
-  // color: $error;
+  color: $red;
 }
 
 // Если ошибка, то можно подчеркнуть поле
@@ -20,8 +34,8 @@ label.invalid {
 
 // Рассчет размера нужен для ограничения ширины блока
 // чтобы сообщение об ошибке вставало корректно
-$checkbox_size: 13px;
-$checkbox_margin_right: 10px;
+$checkbox_size: 20px;
+$checkbox_margin_right: 20px;
 $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
 // $checkbox_border_radius: 0;
 
@@ -29,50 +43,51 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
   display: flex;
   cursor: pointer;
 
-  &_tick { // Чекбокс с галочкой
+  // &_tick {
+    // Чекбокс с галочкой
     align-items: flex-start;
     max-width: 250px;
     flex-wrap: wrap;
-    font: 12px/140% Montserrat;
+    font: 300 12px/140% $ubuntu;
 
     >.check__text {
       width: $checkbox_text_width;
     }
 
-    >.check__inp {
+    >.check__pseudo-inp {
+      flex-shrink: 0;
       margin: 4px $checkbox_margin_right 0 0;
       width: $checkbox_size;
       height: $checkbox_size;
-      background: transparent url('../img/check.svg') center/0 border-box no-repeat;
+      background: url('./img/check.svg') center/0 border-box no-repeat;
+      border: 1px solid $blue;
       transition: background .25s;
       pointer-events: none;
-
-      &:checked {
-        // background-color: $green;
-        background-size: 100%;
-      }
+      border-radius: 3px;
+      overflow: hidden;
     }
-  }
+  // }
 
-  &_fill { // Чекбокс с заполнением цветом
-    align-items: center;
+  // &_fill {
+  //   // Чекбокс с заполнением цветом
+  //   align-items: center;
 
-    >.check__text {}
+  //   >.check__text {}
 
-    >.check__inp {
-      margin: 0 10px 0 0;
-      width: 10px;
-      height: 10px;
-      // box-shadow: inset 0 0 0 10px $white;
-      // background: $green;
-      border-radius: 2px;
-      transition: box-shadow .5s;
+  //   >.check__inp {
+  //     margin: 0 10px 0 0;
+  //     width: 10px;
+  //     height: 10px;
+  //     // box-shadow: inset 0 0 0 10px $white;
+  //     // background: $green;
+  //     border-radius: 2px;
+  //     transition: box-shadow .5s;
 
-      &:checked {
-        // box-shadow: inset 0 0 0 2px $white;
-      }
-    }
-  }
+  //     &:checked {
+  //       // box-shadow: inset 0 0 0 2px $white;
+  //     }
+  //   }
+  // }
 
   >label.invalid {
     position: static;
@@ -86,34 +101,57 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
   }
 
   &__inp {
-    appearance: none;
-    display: inline-flex;
-    border: 1px solid;
-    flex-shrink: 0;
+    opacity: 0;
+    position: absolute;
+    &:checked {
+      + .check__pseudo-inp {
+        background-size: 100%;
+      }
+    }
+    // appearance: none;
+    // display: inline-flex;
+    // border: 1px solid;
+    // flex-shrink: 0;
   }
 
   &__text,
   &__link {
     display: inline-block;
   }
+  &__link {
+    border-bottom: 1px solid;
+    color: $grey;
+    transition: border-bottom-color .5s;
+  }
 }
 
 .field {
-  display: inline-block;
-  font: 16px/140% Montserrat;
+  display: inline-flex;
+  flex-flow: column;
+  align-items: flex-start;
+  font: 300 14px/100% $ubuntu;
   position: relative;
 
   &__textarea,
   &__inp {
+    flex-shrink: 0;
     width: 100%;
-    height: 25px;
-    border: 0;
-    padding: 0;
-    background: 0 0;
+    padding: 15px 10px;
     font: inherit;
+    border-radius: 5px;
+    border: 1px solid $greyBlue;
+    border-bottom: 3px solid $blue;
+    background: 0 0;
+    &::placeholder {
+      font: 300 14px/100% $ubuntu;
+      color: #a7b9be;
+    }
+    &.invalid {
+      border-bottom-color: $red;
+    }
     // color: $black;
-    border-bottom: 1px solid;
-    transition: border-bottom-color .5s;
+    // border-bottom: 1px solid;
+    // transition: border-bottom-color .5s;
 
     &:focus,
     &.filled {
@@ -129,10 +167,22 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
   }
 
   &__text {
-    position: absolute;
-    left: 0;
-    top: 0;
+    margin: 0 0 10px;
+    font-weight: normal;
+
+    &.required {
+      &::after {
+        content: ' *';
+        font: inherit;
+        vertical-align: super;
+        color: $red;
+      }
+    }
+
+    // position: absolute;
+    // left: 0;
+    // top: 0;
     // color: $grey;
-    transition: top .25s, font-size .25s;
+    // transition: top .25s, font-size .25s;
   }
 }

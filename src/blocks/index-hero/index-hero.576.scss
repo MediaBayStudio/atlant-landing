@@ -1,3 +1,43 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+
+.index-hero-sect {
+  &__pic {
+    margin: 0 0 10px $sectionHorizontalPaddingMinus576;
+    width: 100vw;
+    height: responsive('576->767', '240->325');
+  }
+
+  &__img {}
+
+  &__title {}
+
+  &__descr {}
+
+  &__form {
+    .field_name {}
+
+    .field_tel {}
+
+    .field__text {}
+
+    .field__inp {}
+
+    .form-bottom {}
+
+    .check {
+      &__inp {}
+
+      &__pseudo-inp {}
+
+      &__text {}
+
+      &__link {}
+    }
+
+    .btn {}
+  }
+  
+}

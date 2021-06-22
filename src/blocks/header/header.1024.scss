@@ -1,3 +1,23 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hdr {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__logo {
+    width: 250px;
+  }
+
+  &__nav {}
+
+  &__tel,
+  &__email {
+    font-size: 16px;
+  }
+
+  &__burger {}
+
+  &__burger-svg {}
+}

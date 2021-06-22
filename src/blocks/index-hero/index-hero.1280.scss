@@ -1,3 +1,46 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+
+.index-hero-sect {
+  padding-top: 120px;
+  padding-bottom: $sectionVerticalPadding1280;
+  &__pic {
+    height: calc(100% - 150px - #{$sectionVerticalPadding1280});
+  }
+
+  &__img {}
+
+  &__title {}
+
+  &__descr {}
+
+  &__form {
+    margin: 130px auto 0;
+    padding: 60px 165px;
+    width: 1180px;
+    .field_name {}
+
+    .field_tel {}
+
+    .field__text {}
+
+    .field__inp {}
+
+    .form-bottom {}
+
+    .check {
+      &__inp {}
+
+      &__pseudo-inp {}
+
+      &__text {}
+
+      &__link {}
+    }
+
+    .btn {}
+  }
+  
+}

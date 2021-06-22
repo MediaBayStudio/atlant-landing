@@ -1,3 +1,23 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-services-sect {
+  &__pic {
+    &::before {
+      // decor bg
+    }
+  }
+
+  &__img {}
+
+  &__text {}
+
+  &__title {}
+
+  &__list {}
+
+  &__li {
+    &:not(:last-child) {}
+  }
+}

@@ -1,7 +1,12 @@
-
 @import '../assets/colors';
 @import '../assets/mixins';
 @import '../assets/variables';
+
+body {
+  color: $black;
+  font: 14px/150% $ubuntu
+}
+
 // Класс добавляется при вызове попапов и мобильного меню
 body.no-scroll {
   overflow: hidden;
@@ -27,6 +32,77 @@ body.no-scroll {
 //   opacity: .5;
 //   pointer-events: none;
 // }
+
+.contact-link {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    margin: 0 10px 0 0;
+    width: 25px;
+    height: 25px;
+    background: center/contain no-repeat;
+  }
+
+  &-tel-red {
+    &:not(.lazy) {
+      &::before {
+        background-image: url('./img/icon-tel-red.svg');
+      }
+    }
+
+    &.lazyloaded {
+      &::before {
+        background-image: url('./img/icon-tel-red.svg');
+      }
+    }
+  }
+
+  &-tel-blue {
+    &:not(.lazy) {
+      &::before {
+        background-image: url('./img/icon-tel-blue.svg');
+      }
+    }
+
+    &.lazyloaded {
+      &::before {
+        background-image: url('./img/icon-tel-blue.svg');
+      }
+    }
+  }
+
+  &-email-red {
+    &:not(.lazy) {
+      &::before {
+        background-image: url('./img/icon-email-red.svg');
+      }
+    }
+
+    &.lazyloaded {
+      &::before {
+        background-image: url('./img/icon-email-red.svg');
+      }
+    }
+  }
+
+  &-email-blue {
+    &:not(.lazy) {
+      &::before {
+        background-image: url('./img/icon-email-blue.svg');
+      }
+    }
+
+    &.lazyloaded {
+      &::before {
+        background-image: url('./img/icon-email-blue.svg');
+      }
+    }
+  }
+
+}
 
 /* loader */
 // Лоадер в основном для форм
@@ -115,13 +191,79 @@ body.no-scroll {
 
 // Общие стили для секций
 .sect {
-
+  padding-top: $sectionVerticalPadding320;
+  padding-bottom: $sectionVerticalPadding320;
   &_bg {}
 
-  &-title {}
+  &-title {
+    font: bold 22px/130% $ubuntu;
+    text-transform: uppercase;
+  }
+
+  &-title-blue {
+    margin-bottom: 20px;
+    color: $blue;
+  }
 
   &-descr {}
 }
+
+@media (min-width: 767.98px) {
+  .sect {
+    padding-top: $sectionVerticalPadding768;
+    padding-bottom: $sectionVerticalPadding768;
+
+    &_bg {}
+
+    &-title {
+      font-size: 24px;
+    }
+
+    &-title-blue {
+    }
+
+    &-descr {}
+  }
+}
+
+@media (min-width: 1023.98px) {
+  .sect {
+    padding-top: $sectionVerticalPadding1024;
+    padding-bottom: $sectionVerticalPadding1024;
+
+    &_bg {}
+
+    &-title {
+      font-size: 30px;
+    }
+
+    &-title-blue {
+      margin-bottom: 30px;
+    }
+
+    &-descr {}
+  }
+}
+
+@media (min-width: 1279.98px) {
+  .sect {
+    padding-top: $sectionVerticalPadding1280;
+    padding-bottom: $sectionVerticalPadding1280;
+
+    &_bg {}
+
+    &-title {
+      font-size: 32px;
+    }
+
+    &-title-blue {
+      margin-bottom: 40px;
+    }
+
+    &-descr {}
+  }
+}
+
 
 // Скрытие стандартных сообщений от contact form 7
 div.wpcf7-response-output,

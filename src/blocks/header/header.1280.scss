@@ -1,3 +1,37 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hdr {
+
+  &__nav {
+    // margin: 0 50px 0 0;
+    display: block;
+    font: 14px/100% $ubuntu;
+    text-transform: uppercase;
+    &-list {
+      display: flex;
+      align-items: center;
+    }
+    &-li {
+      margin: 0 50px 0 0;
+    }
+  }
+
+  &__tel,
+  &__email {}
+
+  &__tel {}
+
+  &__email {
+    margin: 0;
+  }
+
+  &__logo {}
+
+  &__burger {
+    display: none;
+  }
+
+  &__burger-svg {}
+}

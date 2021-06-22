@@ -3,11 +3,22 @@
 @import '../assets/mixins';
 @import '../assets/variables';
 .btn {
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font: 500 12px/150% $ubuntu;
+  border-radius: 5px;
+  transition: background .5s, border-color .5s, color .5s;
+  &:active {
+    transform: scale(.985);
+  }
 }
 
 .btn_blue {
-
+  background: $blue;
+  border: 1px solid $blue;
+  color: $white;
 }
 
 .btn_ol {

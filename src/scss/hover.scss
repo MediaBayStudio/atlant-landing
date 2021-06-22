@@ -2,3 +2,8 @@
 @import 'assets/colors';
 @import 'assets/mixins';
 @import 'assets/variables';
+
+.btn_blue:hover {
+  color: $blue;
+  background: transparent;
+}

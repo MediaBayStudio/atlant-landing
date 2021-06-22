@@ -15,14 +15,16 @@ $sectionVerticalPadding768:40px;
 $sectionVerticalPadding1024:50px;
 $sectionVerticalPadding1280:60px;
 
-$sectionHorizontalPadding: 20px;
-$sectionHorizontalPadding: calc(50vw - 268px);
-$sectionHorizontalPadding: calc(50vw - 360px);
-$sectionHorizontalPadding: calc(50vw - 480px);
-$sectionHorizontalPadding: calc(50vw - 590px);
+$sectionHorizontalPadding320: 20px;
+$sectionHorizontalPadding576: calc(50vw - 268px);
+$sectionHorizontalPadding768: calc(50vw - 360px);
+$sectionHorizontalPadding1024: calc(50vw - 480px);
+$sectionHorizontalPadding1280: calc(50vw - 590px);
 
-$sectionHorizontalPaddingMinus: -20px;
-$sectionHorizontalPaddingMinus: calc((50vw - 268px) * -1);
-$sectionHorizontalPaddingMinus: calc((50vw - 360px) * -1);
-$sectionHorizontalPaddingMinus: calc((50vw - 480px) * -1);
-$sectionHorizontalPaddingMinus: calc((50vw - 590px) * -1);
+$sectionHorizontalPaddingMinus320: -20px;
+$sectionHorizontalPaddingMinus576: calc((50vw - 268px) * -1);
+$sectionHorizontalPaddingMinus768: calc((50vw - 360px) * -1);
+$sectionHorizontalPaddingMinus1024: calc((50vw - 480px) * -1);
+$sectionHorizontalPaddingMinus1280: calc((50vw - 590px) * -1);
+
+$ubuntu: Ubuntu, sans-serif;

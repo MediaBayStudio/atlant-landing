@@ -1,3 +1,26 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hdr {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  &__nav {}
+
+  &__tel,
+  &__email {
+    margin: 0 50px 0 0;
+    display: flex;
+    font: 500 14px/150% $ubuntu;
+    color: $blue;
+  }
+
+  &__logo {
+    width: 225px;
+  }
+
+  &__burger {}
+
+  &__burger-svg {}
+}
