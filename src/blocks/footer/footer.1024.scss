@@ -1,3 +1,62 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.ftr {
+  padding-top: 55px;
+  padding-bottom: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  &__logo {
+    margin: 0 85px 0 0;
+    width: 250px;
+  }
+
+  &__contacts {
+    margin: 0;
+    flex: 1;
+    width: auto;
+    font-size: 16px;
+    line-height: 150%;
+    > .contact-link-geo-blue {
+      margin: 0 auto 0 0;
+      max-width: 340px;
+    }
+    .contact-link-tel-blue {
+      margin: 0 0 20px;
+    }
+    .contact-link-email-blue {
+    }
+    .contact-link-geo-blue,
+    .contact-link-tel-blue,
+    .contact-link-email-blue {
+      &::before {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &__contact {}
+
+  &__contacts-tel-email {}
+
+  &__bottom {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  &__policy-copy-wrap {
+    max-width: 100%;
+  }
+
+  &__policy {
+    margin: 0 0 10px;
+  }
+
+  &__copy {}
+
+  &__dev {}
+
+  &__dev-link {}
+}
+

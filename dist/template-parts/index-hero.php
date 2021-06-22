@@ -12,5 +12,5 @@
   </picture>
   <h1 class="index-hero-sect__title sect-title"><?php echo $section['title'] ?></h1>
   <p class="index-hero-sect__descr"><?php echo $section['descr'] ?></p> <?php
-  echo do_shortcode( '[contact-form-7 id="4" html_class="index-hero-sect__form form" html_id="hero-form"]' ) ?>
+  echo do_shortcode( '[contact-form-7 id="' . $section['form']->ID . '" html_class="index-hero-sect__form form" html_id="hero-form"]' ) ?>
 </section>

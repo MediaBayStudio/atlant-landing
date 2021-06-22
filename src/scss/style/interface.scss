@@ -22,6 +22,8 @@ body.no-scroll {
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
+  display: flex;
+  flex-flow: column;
 }
 
 // img.lazy {
@@ -36,14 +38,35 @@ body.no-scroll {
 .contact-link {
   display: flex;
   align-items: center;
+  transition: color .5s;
 
   &::before {
     content: '';
     flex-shrink: 0;
-    margin: 0 10px 0 0;
-    width: 25px;
-    height: 25px;
     background: center/contain no-repeat;
+  }
+
+  &-tel-red,
+  &-email-red {
+    &::before {
+      margin: 0 10px 0 0;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &-geo-blue,
+  &-tel-blue,
+  &-email-blue {
+    &::before {
+      margin: 0 15px 0 0;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &-geo-blue {
+    align-items: flex-start;
   }
 
   &-tel-red {
@@ -98,6 +121,20 @@ body.no-scroll {
     &.lazyloaded {
       &::before {
         background-image: url('./img/icon-email-blue.svg');
+      }
+    }
+  }
+
+  &-geo-blue {
+    &:not(.lazy) {
+      &::before {
+        background-image: url('./img/icon-geo-blue.svg');
+      }
+    }
+
+    &.lazyloaded {
+      &::before {
+        background-image: url('./img/icon-geo-blue.svg');
       }
     }
   }
@@ -193,7 +230,13 @@ body.no-scroll {
 .sect {
   padding-top: $sectionVerticalPadding320;
   padding-bottom: $sectionVerticalPadding320;
-  &_bg {}
+
+  &-bg {
+    padding-top: $sectionVerticalPadding320;
+    padding-bottom: $sectionVerticalPadding320;
+    margin-top: $sectionVerticalPadding320;
+    margin-bottom: $sectionVerticalPadding320;
+  }
 
   &-title {
     font: bold 22px/130% $ubuntu;
@@ -213,14 +256,18 @@ body.no-scroll {
     padding-top: $sectionVerticalPadding768;
     padding-bottom: $sectionVerticalPadding768;
 
-    &_bg {}
+    &-bg {
+      padding-top: $sectionVerticalPadding768;
+      padding-bottom: $sectionVerticalPadding768;
+      margin-top: $sectionVerticalPadding768;
+      margin-bottom: $sectionVerticalPadding768;
+    }
 
     &-title {
       font-size: 24px;
     }
 
-    &-title-blue {
-    }
+    &-title-blue {}
 
     &-descr {}
   }
@@ -231,7 +278,12 @@ body.no-scroll {
     padding-top: $sectionVerticalPadding1024;
     padding-bottom: $sectionVerticalPadding1024;
 
-    &_bg {}
+    &-bg {
+      padding-top: $sectionVerticalPadding1024;
+      padding-bottom: $sectionVerticalPadding1024;
+      margin-top: $sectionVerticalPadding1024;
+      margin-bottom: $sectionVerticalPadding1024;
+    }
 
     &-title {
       font-size: 30px;
@@ -250,7 +302,12 @@ body.no-scroll {
     padding-top: $sectionVerticalPadding1280;
     padding-bottom: $sectionVerticalPadding1280;
 
-    &_bg {}
+    &-bg {
+      padding-top: $sectionVerticalPadding1280;
+      padding-bottom: $sectionVerticalPadding1280;
+      margin-top: $sectionVerticalPadding1280;
+      margin-bottom: $sectionVerticalPadding1280;
+    }
 
     &-title {
       font-size: 32px;

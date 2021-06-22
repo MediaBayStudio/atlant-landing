@@ -1,3 +1,40 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-questions-sect {
+  &__wrap {}
+
+  &__title {}
+
+  &__descr {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__form {
+    .field {}
+
+    .field_name {}
+
+    .field_tel {}
+
+    .field__text {}
+
+    .field__inp {}
+
+    .form-bottom {}
+
+    .check {
+      &__inp {}
+
+      &__pseudo-inp {}
+
+      &__text {}
+
+      &__link {}
+    }
+
+    .btn {}
+  }
+}

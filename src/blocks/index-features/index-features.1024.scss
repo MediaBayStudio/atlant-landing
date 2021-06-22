@@ -1,3 +1,27 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-features-sect {
+  &__title {}
+
+  &__list {
+    display: flex;
+  }
+
+  &__feature {
+    flex-shrink: 0;
+    width: calc((100% - 90px) / 4);
+
+    &::before {
+      width: 165px;
+      height: 145px;
+    }
+  }
+
+  &__feature-img {}
+
+  &__feature-title {}
+
+  &__feature-descr {}
+}

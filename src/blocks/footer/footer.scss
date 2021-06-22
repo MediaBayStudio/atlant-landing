@@ -1,3 +1,43 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.ftr {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  background: #F1F3F3;
+  &__logo {
+    margin: 0 0 20px;
+  }
+
+  &__contacts {
+    margin: 0 0 30px;
+  }
+
+  &__contact {
+    margin: 0 0 20px;
+  }
+
+  &__contacts-tel-email {}
+
+  &__bottom {}
+
+  &__policy-copy-wrap {
+    margin: 0 0 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  &__policy {
+    margin: 0 0 20px;
+    border-bottom: 1px solid;
+    transition: border-bottom-color .5s;
+  }
+
+  &__copy {}
+
+  &__dev {}
+
+  &__dev-link {}
+}

@@ -4,6 +4,9 @@
 
 .index-services-sect {
   &__pic {
+    padding: 30px 0 0 30px;
+    margin-top: 70px;
+    width: 465px;
     &::before {
       // decor bg
     }
@@ -15,7 +18,11 @@
 
   &__title {}
 
-  &__list {}
+  &__list {
+    max-width: 430px;
+    font-size: 16px;
+    line-height: 150%;
+  }
 
   &__li {
     &:not(:last-child) {}

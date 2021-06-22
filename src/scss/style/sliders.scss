@@ -2,26 +2,27 @@
 @import '../assets/colors';
 @import '../assets/mixins';
 @import '../assets/variables';
+
 .dots {
   display: flex;
   justify-content: center;
   > li {
     &:nth-last-child(n+2) {
-      margin-right: 14px;
+      margin-right: 10px;
     }
   }
 }
 
 li.slick-active > .dot {
   cursor: default;
-  transform: scale(2);
-  // background: $red;
+  // transform: scale(2);
+  background: $red;
 }
 
 .dots .dot {
-  width: 6px;
-  height: 6px;
-  // background: $light;
+  width: 8px;
+  height: 8px;
+  background: #dcdcdc;
   border-radius: 50%;
   transition: transform .35s, color .35s
 }

@@ -112,7 +112,7 @@
     'items_wrap'      => '<ul class="%2$s">%3$s</ul>'
   ] ) ?>
   <a href="tel:<?php echo $tel_dry ?>" class="hdr__tel contact-link contact-link-tel-red"><?php echo $tel ?></a>
-  <a href="email:<?php echo $email ?>" class="hdr__email contact-link contact-link-email-red"><?php echo $email ?></a>
+  <a href="mailto:<?php echo $email ?>" class="hdr__email contact-link contact-link-email-red"><?php echo $email ?></a>
   <button type="button" class="hdr__burger">
     <svg viewBox="0 0 20 17" class="hdr__burger-svg" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#262626" stroke-width="1.5" d="M0 1.05h20M0 8.55h20M0 16.05h20"/></svg>
   </button> <?php 

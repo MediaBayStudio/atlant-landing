@@ -3,7 +3,12 @@
 @import '../../scss/assets/variables';
 
 .index-services-sect {
+  display: flex;
+  flex-flow: row-reverse;
   &__pic {
+    margin: 50px 0 auto auto;
+    max-width: 100%;
+    width: 325px;
     &::before {
       // decor bg
     }
@@ -15,9 +20,16 @@
 
   &__title {}
 
-  &__list {}
+  &__list {
+    padding-left: 35px;
+    max-width: 340px;
+  }
 
   &__li {
+    &::before {
+      width: 20px;
+      left: -15px;
+    }
     &:not(:last-child) {}
   }
 }

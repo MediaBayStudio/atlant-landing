@@ -7,3 +7,32 @@
   color: $blue;
   background: transparent;
 }
+
+.contact-link-geo-blue,
+.contact-link-email-blue,
+.contact-link-tel-blue {
+  &:hover {
+    color: $blue;
+  }
+}
+
+.contact-link-geo-red,
+.contact-link-email-red,
+.contact-link-tel-red {
+  &:hover {
+    color: $red;
+  }
+}
+
+
+.ftr__policy {
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+.index-faq-sect__item-question:hover {
+  .index-faq-sect__item-title {
+    color: $blue;
+  }
+}

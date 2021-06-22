@@ -1,3 +1,41 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-faq-sect {
+  &__title {}
+
+  &__list {}
+
+  &__item {
+    &:not(:last-child) {}
+
+    &-question {
+      padding: 25px 30px 25px 20px;
+      &::before {}
+
+      &::after {
+        width: 16px;
+        height: 9px;
+      }
+
+      &.lazyloaded {
+        &::after {}
+      }
+    }
+
+    &-answer {
+      padding: 25px 30px 25px 20px;
+    }
+  }
+
+  &__item-title {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__item-descr {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

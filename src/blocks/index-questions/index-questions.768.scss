@@ -1,3 +1,43 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-questions-sect {
+  &__wrap {
+    padding: 30px 40px;
+    box-shadow: 0px 0px 10px rgba(41, 130, 154, 0.15);
+  }
+
+  &__title {}
+
+  &__descr {
+    max-width: 550px;
+  }
+
+  &__form {
+    margin-top: 40px;
+    .field {}
+
+    .field_name {}
+
+    .field_tel {}
+
+    .field__text {}
+
+    .field__inp {}
+
+    .form-bottom {}
+
+    .check {
+      &__inp {}
+
+      &__pseudo-inp {}
+
+      &__text {}
+
+      &__link {}
+    }
+
+    .btn {}
+  }
+}

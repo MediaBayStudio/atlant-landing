@@ -5,6 +5,7 @@
 
 .index-hero-sect {
   padding-bottom: $sectionVerticalPadding320;
+
   // position: relative;
   &__pic {
     margin: 0 0 20px -20px;
@@ -22,8 +23,7 @@
     object-position: top;
   }
 
-  &__title {
-  }
+  &__title {}
 
   &__descr {
     margin-top: 10px;
@@ -31,12 +31,21 @@
   }
 
   &__form {
+    // margin-top: 30px;
+  }
+
+}
+
+.index-hero-sect,
+.index-questions-sect {
+  &__form {
     margin-top: 30px;
 
     .field {
       margin: 0 0 20px;
       width: 100%;
     }
+
     .field_name {}
 
     .field_tel {}
@@ -66,5 +75,4 @@
       height: 45px;
     }
   }
-
 }

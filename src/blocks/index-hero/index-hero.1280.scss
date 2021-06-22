@@ -6,6 +6,7 @@
 .index-hero-sect {
   padding-top: 120px;
   padding-bottom: $sectionVerticalPadding1280;
+
   &__pic {
     height: calc(100% - 150px - #{$sectionVerticalPadding1280});
   }
@@ -20,6 +21,8 @@
     margin: 130px auto 0;
     padding: 60px 165px;
     width: 1180px;
+    // padding: 60px 165px;
+    // width: 1180px;
     .field_name {}
 
     .field_tel {}
@@ -42,5 +45,12 @@
 
     .btn {}
   }
-  
+
+}
+
+.index-hero-sect,
+.index-questions-sect {
+  &__form {
+    
+  }
 }

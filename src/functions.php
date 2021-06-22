@@ -5,10 +5,10 @@ $template_directory = get_template_directory();
 $site_url = site_url();
 
 $address = get_option( 'contacts_address' );
+$address_link = get_option( 'contacts_address_link' );
 $tel = get_option( 'contacts_tel' );
 $tel_dry = preg_replace( '/\s/', '', $tel );
 $email = get_option( 'contacts_email' );
-// $insta = get_option( 'contacts_insta' );
 
 $logo_id = get_theme_mod( 'custom_logo' );
 $logo_url = wp_get_attachment_url( $logo_id );
