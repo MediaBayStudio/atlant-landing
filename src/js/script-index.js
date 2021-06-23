@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //=include ../blocks/index-questions/index-questions.js
 
+//=include ../blocks/thanks-popup/thanks-popup.js
+
 //=include ../blocks/footer/footer.js
 
 });

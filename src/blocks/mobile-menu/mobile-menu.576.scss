@@ -1,3 +1,40 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.menu {
+  background: rgba(0, 0, 0, 0.5);
+  &.active {}
+
+  &__cnt {
+    margin: 0 0 0 auto;
+    padding-top: 35px;
+    max-width: 365px;
+  }
+
+  &__hdr {}
+
+  &__close {
+  }
+
+  &__logo {
+    display: none;
+  }
+
+  &__tel,
+  &__email {}
+
+  &__tel {}
+
+  &__email {}
+
+  &__nav {}
+
+  &__nav-list {}
+
+  &__nav-li {
+    &:not(:last-child) {}
+  }
+
+
+}

@@ -1,3 +1,26 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-about-sect {
+  display: flex;
+  align-items: center;
+  &__pic {
+    margin: 0 80px 0 0;
+    flex-shrink: 0;
+    width: 295px;
+    height: 290px;
+  }
+
+  &__img {}
+
+  &__text {
+    max-width: 375px;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__descr {}
+}

@@ -1,3 +1,32 @@
+// assets import
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.thanks-popup {
+  align-items: center;
+  &__cnt {
+    padding: 50px 20px;
+    position: relative;
+    text-align: center;
+  }
+  &__title {
+    margin: 0 0 10px;
+    display: block;
+    font: bold 16px/150% $ubuntu;
+    text-transform: uppercase;
+    color: $blue;
+  }
+  &__descr {
+    max-width: 220px;
+  }
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIwIDEuMTc4TDE4LjgyMiAwIDEwIDguODIyIDEuMTc4IDAgMCAxLjE3OCA4LjgyMiAxMCAwIDE4LjgyMiAxLjE3OCAyMCAxMCAxMS4xNzggMTguODIyIDIwIDIwIDE4LjgyMiAxMS4xNzggMTAgMjAgMS4xNzh6IiBmaWxsPSIjMDAwIi8+PC9zdmc+') center/contain no-repeat;
+  }
+}

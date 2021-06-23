@@ -1,3 +1,88 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+#wpadminbar {
+  display: none;
+}
+
+html[lang] {
+  margin-top: 0 !important;
+}
+
+.menu {
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  height: calc(var(--vh, 1vh) * 100);
+  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
+  height: 100vh;
+  z-index: 2;
+  &.active {
+    display: inline-block;
+  }
+
+  &__cnt {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px 7.05vh; // 40px на width: 320px;
+    background: $white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100%;
+  }
+
+  &__hdr {
+    margin: 0 0 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__close {
+    margin: 0 0 0 auto;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIwIDEuMTc4TDE4LjgyMiAwIDEwIDguODIyIDEuMTc4IDAgMCAxLjE3OCA4LjgyMiAxMCAwIDE4LjgyMiAxLjE3OCAyMCAxMCAxMS4xNzggMTguODIyIDIwIDIwIDE4LjgyMiAxMS4xNzggMTAgMjAgMS4xNzh6IiBmaWxsPSIjMDAwIi8+PC9zdmc+');
+  }
+
+  &__logo {}
+
+  &__tel,
+  &__email {
+    font: 500 16px/150% $ubuntu;
+    color: $blue;
+  }
+
+  &__tel {
+    margin: 0 0 20px;
+  }
+
+  &__email {}
+
+  &__nav {}
+
+  &__nav-list {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  &__nav-li {
+    &:not(:last-child) {
+      margin: 0 0 30px;
+    }
+  }
+
+
+}

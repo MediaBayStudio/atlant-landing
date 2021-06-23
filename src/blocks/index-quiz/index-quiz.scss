@@ -13,5 +13,303 @@
 }
 
 .quiz {
-  &__img {}
+  &.loading {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: $white;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      border-radius: 50%;
+      border: 5px solid $blue;
+      border-top: 0;
+      z-index: 2;
+    }
+  }
+
+  &.final-step {
+    .quiz__step-title {
+      font-size: 0;
+      &::before {
+        content: 'Персональная информация';
+        font: 17px/141% $ubuntu;
+      }
+    }
+    >.quiz__footer {
+        bottom: 115px;
+        right: 355px;
+      >.quiz__prev {
+        // margin: 0 auto;
+      }
+
+      >.quiz__next {
+        display: none;
+      }
+    }
+  }
+
+  &__pic {}
+}
+
+.quiz {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__steps-counter {
+    font: 18px/100% $ubuntu;
+    text-transform: uppercase;
+  }
+
+  &__current-steps-number {}
+
+  &__total-steps-number {}
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__dot {
+    margin-right: 15px;
+
+    &.last {
+      margin-right: 0;
+    }
+  }
+
+  &__body {
+    margin: 35px 0 40px;
+  }
+
+  &__step {
+    opacity: 0;
+    visibility: hidden;
+    grid-row: 1;
+    grid-column: 1;
+    align-self: start;
+    transition: opacity .35s, visibility .35s;
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+      position: static;
+      transition: opacity .35s .5s, visibility .35s .5s;
+    }
+
+    &.hidden {
+      display: block !important;
+    }
+  }
+
+  &__step-title {
+    margin-top: 10px;
+    width: 100%;
+    font: 17px/141% $ubuntu;
+    // color: $blue;
+  }
+
+  &__group-inputs {
+    // margin: 35px auto 0;
+    margin: 35px 0;
+    max-width: 350px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    position: relative;
+
+    &:first-child {
+      margin-top: 0;
+
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__radio,
+  &__checkbox {
+    &:nth-last-child(n+2) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__group-title {
+    display: block;
+    margin-bottom: 25px;
+    font: 6px/120% $ubuntu;
+  }
+
+  &__radio-inp {}
+
+  &__radio-pseudo-inp {}
+
+  &__radio-label {}
+
+
+
+  &__text {
+    width: 100%;
+
+    &:nth-last-of-type(n+2) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__text-inp {}
+
+  &__text-label {}
+
+  &__step-3 {
+    // opacity: 1 !important;
+    // position: relative !important;
+    // visibility: visible !important;
+  }
+
+  &__select {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  &__select-select {}
+
+  &__step-4 {}
+
+  &__extra-field {
+    opacity: 0;
+    visibility: hidden;
+    // max-height: 0;
+    position: absolute;
+    transition: opacity .35s, visibility .35s;
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+      transition: opacity .35s .5s, visibility .35s .5s;
+    }
+  }
+
+  &__step-5 {}
+
+  &__final-step {}
+
+  &__form {
+    margin: 0 auto;
+    // margin: 35px auto 0;
+    max-width: 350px;
+    position: relative;
+
+    &-result {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    >.field {
+      width: 100%;
+
+      &_name,
+      &_tel {
+        margin-bottom: 25px;
+      }
+
+      &_tel {}
+    }
+
+    .field {
+      &__text {}
+
+      &__inp {}
+    }
+
+    >.form-bottom {}
+
+    .check {
+      margin: auto;
+
+      &__inp {}
+
+      &__pseudo-inp {}
+
+      &__text {}
+
+      &__link {}
+    }
+
+    .btn {
+      margin-top: 20px;
+      max-width: 350px;
+      width: 100%;
+      height: 55px;
+      line-height: 135%;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font: 14/100% $ubuntu;
+  }
+
+  &__next {
+    width: 90px;
+    height: 30px;
+    color: $white;
+    text-transform: none;
+
+    // &::after {
+    //   content: '';
+    //   margin-left: 10px;
+    //   width: 30px;
+    //   height: 12px;
+    //   background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzEiIGhlaWdodD0iMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggb3BhY2l0eT0iLjIiIGQ9Ik0zMC41MyA2LjUzYS43NS43NSAwIDAwMC0xLjA2TDI1Ljc1Ny42OTdhLjc1Ljc1IDAgMDAtMS4wNiAxLjA2TDI4LjkzOSA2bC00LjI0MiA0LjI0M2EuNzUuNzUgMCAwMDEuMDYgMS4wNkwzMC41MyA2LjUzek0wIDYuNzVoMzB2LTEuNUgwdjEuNXoiIGZpbGw9IiNEQjA2M0QiLz48L3N2Zz4=') center/contain no-repeat;
+    // }
+
+    &.disabled {
+      opacity: .35;
+      pointer-events: none;
+    }
+
+
+  }
+
+  &__prev {
+    margin: 0 25px 0 0;
+    color: $blue;
+    // border-bottom: 1px solid;
+
+    &:focus {
+      // outline: 1px dotted $black;
+    }
+
+    &.disabled {
+      opacity: 0.35;
+      pointer-events: none;
+    }
+  }
+
+  &__pic {
+    display: none;
+  }
 }

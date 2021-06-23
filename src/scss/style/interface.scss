@@ -35,6 +35,11 @@ body.no-scroll {
 //   pointer-events: none;
 // }
 
+.nav-link {
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color .5s;
+}
+
 .contact-link {
   display: flex;
   align-items: center;
@@ -236,6 +241,7 @@ body.no-scroll {
     padding-bottom: $sectionVerticalPadding320;
     margin-top: $sectionVerticalPadding320;
     margin-bottom: $sectionVerticalPadding320;
+    background: #fcfcfc;
   }
 
   &-title {

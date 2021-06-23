@@ -3,6 +3,7 @@
   // Массив форм, на которые будет добавлена валидация
   let $forms = [
     id('hero-form'),
+    id('quiz-form'),
     id('questions-form')
   ];
 
@@ -197,10 +198,10 @@
           $form.classList.remove('sent');
         }, 3000);
 
-        // thanksPopup.openPopup();
-        // thanksPopupTimer = setTimeout(function() {
-        //   thanksPopup.closePopup();
-        // }, 3000);
+        thanksPopup.openPopup();
+        thanksPopupTimer = setTimeout(function() {
+          thanksPopup.closePopup();
+        }, 3000);
 
 
       },

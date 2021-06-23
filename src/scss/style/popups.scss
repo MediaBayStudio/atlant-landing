@@ -40,7 +40,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: #000;
+  background: rgba(0,0,0,.5);
   opacity: 0;
   visibility: hidden;
   transition: opacity .5s, visibility .5s;
@@ -55,14 +55,13 @@
   &__cnt {
     // Внутренности попапа
     background-color: #fff;
-    color: #000;
+    color: $black;
   }
 
   &__close {
     // Закрывающий крестик
-    width: 17.5px;
-    height: 17.5px;
-    padding: 2.5px;
+    width: 15px;
+    height: 15px;
     transition: color .4s;
 
     &:active {

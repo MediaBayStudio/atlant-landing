@@ -1,3 +1,22 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-about-sect {
+  &__pic {
+    margin: 0 110px 0 0;
+    width: 380px;
+    height: 380px;
+  }
+
+  &__img {}
+
+  &__title {
+    font-size: 22px;
+  }
+
+  &__descr {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

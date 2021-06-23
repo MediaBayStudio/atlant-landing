@@ -51,7 +51,7 @@ add_action( 'wp_enqueue_scripts', function() {
   enqueue_style( 'hover', '' ); // подключаем стили для эффектов при наведении
 
   // Подключаем скрипты циклом
-	$scripts = ['lazy.min', 'slick.min', 'script', $script_name];
+	$scripts = ['lazy.min', 'Popup.min', 'slick.min', 'script', $script_name];
 
   foreach ( $scripts as $script ) {
     wp_enqueue_script( "{$script}", $template_directory_uri . "/js/{$script}.js", [], null );
@@ -73,11 +73,11 @@ add_action( 'wp_enqueue_scripts', function() {
   add_filter( 'script_loader_tag',   function( $html, $handle ) {
     switch ( $handle ) {
       case 'lazy.min':
+      case 'Popup.min':
       case 'slick.min':
       case 'script':
       case $GLOBALS['page_script_name']:
       case 'contact-form-7':
-      #!!!defer_scripts
         $html = str_replace( ' src', ' defer src', $html );
         break;
     }

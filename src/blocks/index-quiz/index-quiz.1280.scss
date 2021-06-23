@@ -1,3 +1,163 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-quiz-sect {
+  &__title {}
+
+  &__quiz {}
+}
+
+.quiz {
+  &.loading {
+    &::before {}
+
+    &::after {}
+  }
+
+  &.final-step {
+    >.quiz__footer {
+      >.quiz__prev {}
+
+      >.quiz__next {}
+    }
+  }
+
+  &__pic {
+    padding: 50px 0 0 50px;
+    top: 40px;
+    right: 60px;
+    width: 350px;
+    height: 420px;
+  }
+
+  &__img {}
+}
+
+.quiz {
+  padding: 40px 60px;
+  &__header {}
+
+  &__steps-counter {}
+
+  &__current-steps-number {}
+
+  &__total-steps-number {}
+
+  &__dots {}
+
+  &__dot {
+
+    &.last {}
+  }
+
+  &__body {
+    margin: 80px 0;
+  }
+
+  &__step {
+
+    &.visible {}
+
+    &.hidden {}
+  }
+
+  &__step-title {}
+
+  &__group-inputs {
+    &:first-child {}
+
+    &:last-child {}
+  }
+
+  &__radio,
+  &__checkbox {
+    &:nth-last-child(n+2) {}
+  }
+
+  &__group-title {}
+
+  &__radio-inp {}
+
+  &__radio-pseudo-inp {}
+
+  &__radio-label {}
+
+
+
+  &__text {
+
+    &:nth-last-of-type(n+2) {}
+  }
+
+  &__text-inp {}
+
+  &__text-label {}
+
+  &__step-3 {}
+
+  &__select {}
+
+  &__select-select {}
+
+  &__step-4 {}
+
+  &__extra-field {
+
+    &.visible {}
+  }
+
+  &__step-5 {}
+
+  &__final-step {}
+
+  &__form {
+
+    &-result {}
+
+    >.field {
+
+      &_name,
+      &_tel {}
+
+      &_tel {}
+    }
+
+    .field {
+      &__text {}
+
+      &__inp {}
+    }
+
+    >.form-bottom {}
+
+    .check {
+
+      &__inp {}
+
+      &__pseudo-inp {}
+
+      &__text {}
+
+      &__link {}
+    }
+
+    .btn {}
+  }
+
+  &__footer {}
+
+  &__next {
+
+    &.disabled {}
+  }
+
+  &__prev {
+
+    &:focus {}
+
+    &.disabled {}
+  }
+
+  &__img {}
+}

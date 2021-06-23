@@ -10,6 +10,8 @@
   }
 
   &__item {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(41, 130, 154, 0.15);
     overflow: hidden;
     transition: max-height .5s;
     &:not(:last-child) {
@@ -26,8 +28,6 @@
       padding: 15px 20px 15px 10px;
       display: flex;
       align-items: center;
-      box-shadow: 0px 0px 10px rgba(41, 130, 154, 0.15);
-      border-radius: 5px;
       cursor: pointer;
 
       &::before {
@@ -60,7 +60,7 @@
 
     &-answer {
       padding: 15px 20px 15px 10px;
-      background: #FCFCFC;
+      // background: #FCFCFC;
     }
   }
 

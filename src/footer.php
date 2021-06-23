@@ -20,7 +20,7 @@
         <div class="ftr__bottom">
           <div class="ftr__policy-copy-wrap">
             <a href="<?php echo $site_url ?>/policy.pdf" target="_blank" title="Посмотреть политику конфиденциальности" class="ftr__policy">Политика конфиденциальности</a>
-            <p class="ftr__copy">&copy;&nbsp;2016-<?php echo date( 'Y' ) ?> , ИП&nbsp;Занько Михаил Александрович. Все права защищены.</p>
+            <p class="ftr__copy">&copy;&nbsp;2016-<?php echo date( 'Y' ) ?>, ИП&nbsp;Занько Михаил Александрович. Все права защищены.</p>
           </div>
           <div class="ftr__dev">Разработка сайта – <a href="https://media-bay.ru" target="_blank" class="ftr__dev-link" title="Перейти на сайт разработчика">media bay</a></div>
         </div>

@@ -74,6 +74,7 @@ var browser = {
   overlay,
   body,
   fakeScrollbar,
+  thanksPopup,
   // Сокращение записи querySelector
   q = function(selector, element) {
     element = element || body;
@@ -128,7 +129,9 @@ var browser = {
       return;
     }
 
-    menu && menu.close();
+    if (menu && menu.menu.classList.contains('active')) {
+      menu.close();
+    }
 
     let wndwY = window.pageYOffset,
       targetStyles = getComputedStyle(target),

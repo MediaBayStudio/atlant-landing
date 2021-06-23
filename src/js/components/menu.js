@@ -42,10 +42,13 @@ mobileMenu = function(_) {
         let target = e && e.target;
         // Если меню открыто и произошел свайп или нет события (закрыто вызовом функции close()) или есть евент и его св-ва
         if (forSwipe || !e || (e.type === 'keyup' && e.keyCode === 27 || target === menu || target === closeBtn)) {
-          menu.classList.remove('active');
-          openBtn.classList.remove('active');
+          // menu.classList.remove('active');
+          // openBtn.classList.remove('active');
 
-          if (!fade) {
+          if (fade) {
+            menu.classList.remove('active');
+            openBtn.classList.remove('active');
+          } else {
             setMenuStyles(initialTransformX, '.5s');
           }
         }
@@ -137,15 +140,19 @@ mobileMenu = function(_) {
     transitionEndEvents = function() {
       if (opened) {
         menu.isOpened = opened = false;
+        _.opened = false;
         openBtn.addEventListener('click', openMenu);
         closeBtn.removeEventListener('click', closeMenu);
         if (!allowPageScroll) {
           pageScroll(false);
         }
-        console.log('sticky hdr');
-        sticky(hdr);
+        menu.classList.remove('active');
+        openBtn.classList.remove('active');
+        // console.log('sticky hdr');
+        // sticky(hdr);
       } else {
         menu.isOpened = opened = true;
+        _.opened = true;
         openBtn.removeEventListener('click', openMenu);
         closeBtn.addEventListener('click', closeMenu);
       }
@@ -173,7 +180,7 @@ mobileMenu = function(_) {
     },
     setListeners = function(action) {
       openBtn[action + 'EventListener']('click', openMenu);
-      menu[action + 'EventListener']('click', closeMenu);
+      // menu[action + 'EventListener']('click', closeMenu);
       menu[action + 'EventListener']('transitionend', transitionEnd);
       document[action + 'EventListener']('keyup', closeMenu);
     },
