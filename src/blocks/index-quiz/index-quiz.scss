@@ -12,6 +12,25 @@
   }
 }
 
+.quiz__select-inp {
+  height: 52px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.quiz__select {
+  position: relative;
+  &::after {
+    content: '';
+    width: 15px;
+    height: 10px;
+    position: absolute;
+    bottom: 19px;
+    right: 10px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNi45OTcgNS43OTNMMTMuMDguMTQ2YS41NjkuNTY5IDAgMDEuNzYxIDBjLjIxLjE5Ni4yMS41MTIgMCAuNzA3bC02LjQ2NCA2YS41NjkuNTY5IDAgMDEtLjc2MiAwTC4xNS44NTRBLjQ3NS40NzUgMCAwMS4xNjQuMTQ2YS41Ny41NyAwIDAxLjc0OSAwbDYuMDg0IDUuNjQ3eiIgZmlsbD0iIzI5ODI5QSIvPjwvc3ZnPg==) center/contain no-repeat;
+  }
+}
+
 .quiz {
   &.loading {
     &::before {
@@ -49,9 +68,11 @@
       }
     }
     >.quiz__footer {
-        bottom: 115px;
-        right: 355px;
+      margin: 25px 0 0 0;
+      width: 100%;
+      justify-content: center;
       >.quiz__prev {
+        margin: 0;
         // margin: 0 auto;
       }
 
@@ -154,7 +175,7 @@
   &__group-title {
     display: block;
     margin-bottom: 25px;
-    font: 6px/120% $ubuntu;
+    font: 14px/120% $ubuntu;
   }
 
   &__radio-inp {}

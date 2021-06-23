@@ -20,10 +20,12 @@
       display: none;
     }
     >.quiz__footer {
-      justify-content: center;
       margin: auto;
+      width: 270px;
+      // justify-content: center;
+      // margin: auto;
       >.quiz__prev {
-        margin: 0;
+        // margin: 0;
       }
 
       >.quiz__next {}
