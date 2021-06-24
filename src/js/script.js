@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   body = document.body;
 
   //=include components/telMask.js
-  
+
   //=include components/validateForms.js
 
   //=include components/menu.js
@@ -24,15 +24,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   hdr = q('.hdr');
 
-  menu = mobileMenu({
-    menu: q('.menu'),
-    menuCnt: q('.menu__cnt'),
-    openBtn: burger,
-    closeBtn: q('.menu__close'),
-    toLeft: true,
-    fade: false,
-    allowPageScroll: false
-  });
+  if (burger) {
+    menu = mobileMenu({
+      menu: q('.menu'),
+      menuCnt: q('.menu__cnt'),
+      openBtn: burger,
+      closeBtn: q('.menu__close'),
+      toLeft: true,
+      fade: false,
+      allowPageScroll: false
+    });
+  }
+
+
 
   // menu.open();
 

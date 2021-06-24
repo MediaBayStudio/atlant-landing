@@ -242,6 +242,9 @@ body.no-scroll {
     margin-top: $sectionVerticalPadding320;
     margin-bottom: $sectionVerticalPadding320;
     background: #fcfcfc;
+    +.sect-bg {
+      margin-top: -$sectionVerticalPadding320;
+    }
   }
 
   &-title {
@@ -267,6 +270,9 @@ body.no-scroll {
       padding-bottom: $sectionVerticalPadding768;
       margin-top: $sectionVerticalPadding768;
       margin-bottom: $sectionVerticalPadding768;
+      +.sect-bg {
+        margin-top: -$sectionVerticalPadding768;
+      }
     }
 
     &-title {
@@ -289,6 +295,9 @@ body.no-scroll {
       padding-bottom: $sectionVerticalPadding1024;
       margin-top: $sectionVerticalPadding1024;
       margin-bottom: $sectionVerticalPadding1024;
+      +.sect-bg {
+        margin-top: -$sectionVerticalPadding1024;
+      }
     }
 
     &-title {
@@ -313,6 +322,9 @@ body.no-scroll {
       padding-bottom: $sectionVerticalPadding1280;
       margin-top: $sectionVerticalPadding1280;
       margin-bottom: $sectionVerticalPadding1280;
+      +.sect-bg {
+        margin-top: -$sectionVerticalPadding1280;
+      }
     }
 
     &-title {

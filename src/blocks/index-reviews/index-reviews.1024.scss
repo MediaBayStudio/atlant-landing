@@ -1,0 +1,29 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-reviews-sect {
+  &::before {
+    //decor text
+    font-size: 350px;
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    font-size: 24px;
+  }
+
+  &__text {
+    font-size: 24px;
+  }
+
+  &__one {}
+
+  &__two {
+    padding: 0 0 0 20px;
+    font-size: 120px;
+  }
+
+  &__three {
+  }
+}

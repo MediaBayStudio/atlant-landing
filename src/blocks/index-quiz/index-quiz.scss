@@ -3,6 +3,11 @@
 @import '../../scss/assets/variables';
 
 .index-quiz-sect {
+  &.index-v2 {
+    .index-quiz-sect__title {
+      text-align: center;
+    }
+  }
   &__title {}
 
   &__quiz {

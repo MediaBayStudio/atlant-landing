@@ -1,0 +1,57 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+@font-face {
+  font-family: 'IntroBlack';
+  src: url('../fonts/IntroBlack-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.index-reviews-sect {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  &::before {
+    //decor text
+    content: attr(data-text);
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: bold 230px/100% IntroBlack, serif;
+    color: #f1f3f3;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    position: relative;
+    font: 500 18px/133% $ubuntu;
+  }
+
+  &__text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 500 12px/100% $ubuntu;
+  }
+
+  &__one {
+    // margin: 20px 0 0;
+  }
+
+  &__two {
+    padding: 0 10px;
+    font: 72px/100% IntroBlack, serif;
+    color: $red;
+  }
+
+  &__three {
+    margin: 0 0 20px;
+    align-self: flex-end;
+  }
+}

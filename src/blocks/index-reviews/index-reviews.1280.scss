@@ -1,0 +1,22 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-reviews-sect {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &::before {
+    top: 45%;
+    //decor text
+  }
+
+  &__title {}
+
+  &__text {}
+
+  &__one {}
+
+  &__two {}
+
+  &__three {}
+}

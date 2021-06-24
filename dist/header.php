@@ -9,13 +9,24 @@
     $tel_dry,
     $email,
     $template_directory_uri;
+
+    $fonts = [
+      'Ubuntu-Light.woff',
+      'Ubuntu-Regular.woff',
+      'Ubuntu-Medium.woff',
+      'Ubuntu-Bold.woff',
+      'SegoeUI-SemiBold.woff'
+    ];
+
     if ( is_page_template( 'index.php' ) || is_front_page() ) {
       $style_name = 'style-index';
       $script_name = 'script-index';
     } else if ( is_page_template( 'index-v2.php' ) ) {
-      $hdr_class = ' index-v2';
+      $class = ' index-v2';
       $style_name = 'style-index-v2';
       $script_name = 'script-index-v2';
+
+      $fonts[] = 'IntroBlack-Regular.woff';
     }
 
     $GLOBALS['page_script_name'] = $script_name;
@@ -37,13 +48,6 @@
 	<link rel="preload" as="style" href="<?php echo $template_directory_uri ?>/css/<?php echo $page_style ?>.1280.css" media="(min-width:1279.98px)" />
   <link rel="preload" as="style" href="<?php echo $template_directory_uri ?>/css/hover.css" media="(hover) and (min-width:1024px)">
   <!-- fonts preload --> <?php
-	$fonts = [
-		'Ubuntu-Light.woff',
-    'Ubuntu-Regular.woff',
-    'Ubuntu-Medium.woff',
-		'Ubuntu-Bold.woff',
-		'SegoeUI-SemiBold.woff'
-	];
 	foreach ( $fonts as $font ) : ?>
 
 	<link rel="preload" href="<?php echo $template_directory_uri . '/fonts/' . $font ?>" as="font" type="font/woff" crossorigin="anonymous" /> <?php
@@ -120,7 +124,7 @@
     <!-- <noindex> -->Для полноценного использования сайта включите JavaScript в настройках вашего браузера.<!-- </noindex> -->
   </noscript>
   <div id="page-wrapper">
-  <header class="hdr container<?php echo $hdr_class ?>">
+  <header class="hdr container<?php echo $class ?>">
   <img src="<?php echo $logo_url ?>" alt="Логтип Атлант" class="hdr__logo"> <?php
   if ( !is_page_template( 'index-v2.php' ) ) {
     wp_nav_menu( [
