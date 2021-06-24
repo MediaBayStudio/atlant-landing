@@ -249,6 +249,9 @@
 
   for (var i = $forms.length - 1; i >= 0; i--) {
     if ($forms[i]) {
+      $forms[i].addEventListener('submit', function() {
+        sptRecordConversion(218);  
+      });
       formValidator({
         form: $forms[i],
         formBtn: q('button', $forms[i]),
