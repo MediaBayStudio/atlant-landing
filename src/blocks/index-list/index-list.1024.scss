@@ -1,0 +1,28 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-list-sect {
+  &__title {
+    max-width: 670px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+  }
+
+  &__list {
+    margin: 30px 0 -30px;
+  }
+
+  &__li {
+    width: calc((100% - 80px) / 2);
+    &::before {}
+    &:nth-child(n) {
+      margin: 0 80px 30px 0;
+    }
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}

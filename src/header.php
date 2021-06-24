@@ -12,7 +12,7 @@
     if ( is_page_template( 'index.php' ) || is_front_page() ) {
       $style_name = 'style-index';
       $script_name = 'script-index';
-    } else if ( is_page_template( 'index.v2.php' ) ) {
+    } else if ( is_page_template( 'index-v2.php' ) ) {
       $hdr_class = ' index-v2';
       $style_name = 'style-index-v2';
       $script_name = 'script-index-v2';
@@ -122,7 +122,7 @@
   <div id="page-wrapper">
   <header class="hdr container<?php echo $hdr_class ?>">
   <img src="<?php echo $logo_url ?>" alt="Логтип Атлант" class="hdr__logo"> <?php
-  if ( !is_page_template( 'index.v2.php' ) ) {
+  if ( !is_page_template( 'index-v2.php' ) ) {
     wp_nav_menu( [
       'theme_location'  => 'header_menu',
       'container'       => 'nav',
@@ -133,7 +133,7 @@
   } ?>
   <a href="tel:<?php echo $tel_dry ?>" class="hdr__tel contact-link contact-link-tel-red"><?php echo $tel ?></a>
   <a href="mailto:<?php echo $email ?>" class="hdr__email contact-link contact-link-email-red"><?php echo $email ?></a> <?php
-  if ( !is_page_template( 'index.v2.php' ) ) : ?>
+  if ( !is_page_template( 'index-v2.php' ) ) : ?>
     <button type="button" class="hdr__burger">
       <svg viewBox="0 0 20 17" class="hdr__burger-svg" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#262626" stroke-width="1.5" d="M0 1.05h20M0 8.55h20M0 16.05h20"/></svg>
     </button> <?php

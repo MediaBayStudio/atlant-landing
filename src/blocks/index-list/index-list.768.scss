@@ -1,0 +1,33 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-list-sect {
+  &__title {
+    margin: auto;
+    max-width: 530px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+  }
+
+  &__list {
+    margin-bottom: -20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: 16px;
+  }
+
+  &__li {
+    width: calc((100% - 30px) / 2);
+    &::before {}
+    &:nth-child(n) {
+      margin: 0 30px 20px 0;
+    }
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}

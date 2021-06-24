@@ -1,0 +1,1 @@
+@charset "UTF-8";.index-list-sect__title{max-width:100%}.index-list-sect__subtitle{font-size:22px}.index-list-sect__list{margin-top:50px}.index-list-sect__li{width:calc((100% - 130px)/ 2)}.index-list-sect__li::before{margin-right:20px;width:40px}.index-list-sect__li:nth-child(n){margin:0 130px 20px 0}.index-list-sect__li:nth-child(2n){margin-right:0}
