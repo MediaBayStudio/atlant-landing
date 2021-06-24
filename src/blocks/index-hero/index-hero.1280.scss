@@ -21,6 +21,7 @@
     margin: 130px auto 0;
     padding: 60px 165px;
     width: 1180px;
+
     // padding: 60px 165px;
     // width: 1180px;
     .field_name {}
@@ -46,11 +47,26 @@
     .btn {}
   }
 
+  &.index-hero-v2 {
+    .index-hero-sect__title {
+      font-size: 48px;
+    }
+  }
+
+  &__list {
+    margin-left: 190px;
+    font-size: 22px;
+  }
+
+  &__li {
+    &::before {}
+
+    &:not(:last-child) {}
+  }
+
 }
 
 .index-hero-sect,
 .index-questions-sect {
-  &__form {
-    
-  }
+  &__form {}
 }

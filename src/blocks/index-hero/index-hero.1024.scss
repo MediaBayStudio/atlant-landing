@@ -62,6 +62,25 @@
     // }
   }
 
+  &.index-hero-v2 {
+    .index-hero-sect__title {
+      font-size: 36px;
+    }
+  }
+
+  &__list {
+    margin: 20px 0 0 177px;
+    font-size: 18px;
+  }
+
+  &__li {
+    &::before {
+    }
+    &:not(:last-child) {
+      margin: 0 0 20px;
+    }
+  }
+
 }
 
 .index-hero-sect,

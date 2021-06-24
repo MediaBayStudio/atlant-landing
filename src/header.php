@@ -12,7 +12,12 @@
     if ( is_page_template( 'index.php' ) || is_front_page() ) {
       $style_name = 'style-index';
       $script_name = 'script-index';
+    } else if ( is_page_template( 'index.v2.php' ) ) {
+      $hdr_class = ' index-v2';
+      $style_name = 'style-index-v2';
+      $script_name = 'script-index-v2';
     }
+
     $GLOBALS['page_script_name'] = $script_name;
     $GLOBALS['page_style_name'] = $style_name;
     $page_style = $GLOBALS['page_style_name'] ?>
@@ -56,25 +61,31 @@
 
   $ending = $webp_support ? '.webp' : '.jpg';
 
+  if ( $GLOBALS['sections'][0]['v2'] ) {
+    $img_name = 'hero-img-v2';
+  } else {
+    $img_name = 'hero-img';
+  }
+
   $hero_image = [
     [
-      'filepath' => 'img/hero-img-mobile' . $ending,
+      'filepath' => 'img/' . $img_name . '-mobile' . $ending,
       'media' => $media['1x_mobile']
     ],
     [
-      'filepath' => 'img/hero-img-mobile@2x' . $ending,
+      'filepath' => 'img/' . $img_name . '-mobile@2x' . $ending,
       'media' => $media['2x_mobile']
     ],
     [
-      'filepath' => 'img/hero-img-tablet' . $ending,
+      'filepath' => 'img/' . $img_name . '-tablet' . $ending,
       'media' => $media['1x_tablet']
     ],
     [
-      'filepath' => 'img/hero-img-tablet@2x' . $ending,
+      'filepath' => 'img/' . $img_name . '-tablet@2x' . $ending,
       'media' => $media['2x_tablet']
     ],
     [
-      'filepath' => 'img/hero-img-desktop' . $ending,
+      'filepath' => 'img/' . $img_name . '-desktop' . $ending,
       'media' => $media['1x_desktop']
     ]
   ];
@@ -109,19 +120,23 @@
     <!-- <noindex> -->Для полноценного использования сайта включите JavaScript в настройках вашего браузера.<!-- </noindex> -->
   </noscript>
   <div id="page-wrapper">
-  <header class="hdr container">
+  <header class="hdr container<?php echo $hdr_class ?>">
   <img src="<?php echo $logo_url ?>" alt="Логтип Атлант" class="hdr__logo"> <?php
-  wp_nav_menu( [
-    'theme_location'  => 'header_menu',
-    'container'       => 'nav',
-    'container_class' => 'hdr__nav',
-    'menu_class'      => 'hdr__nav-list',
-    'items_wrap'      => '<ul class="%2$s">%3$s</ul>'
-  ] ) ?>
+  if ( !is_page_template( 'index.v2.php' ) ) {
+    wp_nav_menu( [
+      'theme_location'  => 'header_menu',
+      'container'       => 'nav',
+      'container_class' => 'hdr__nav',
+      'menu_class'      => 'hdr__nav-list',
+      'items_wrap'      => '<ul class="%2$s">%3$s</ul>'
+    ] );
+  } ?>
   <a href="tel:<?php echo $tel_dry ?>" class="hdr__tel contact-link contact-link-tel-red"><?php echo $tel ?></a>
-  <a href="mailto:<?php echo $email ?>" class="hdr__email contact-link contact-link-email-red"><?php echo $email ?></a>
-  <button type="button" class="hdr__burger">
-    <svg viewBox="0 0 20 17" class="hdr__burger-svg" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#262626" stroke-width="1.5" d="M0 1.05h20M0 8.55h20M0 16.05h20"/></svg>
-  </button> <?php 
+  <a href="mailto:<?php echo $email ?>" class="hdr__email contact-link contact-link-email-red"><?php echo $email ?></a> <?php
+  if ( !is_page_template( 'index.v2.php' ) ) : ?>
+    <button type="button" class="hdr__burger">
+      <svg viewBox="0 0 20 17" class="hdr__burger-svg" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#262626" stroke-width="1.5" d="M0 1.05h20M0 8.55h20M0 16.05h20"/></svg>
+    </button> <?php
+  endif;
   require 'template-parts/mobile-menu.php' ?>
   </header>

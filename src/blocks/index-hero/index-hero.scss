@@ -34,6 +34,35 @@
     // margin-top: 30px;
   }
 
+  &.index-hero-v2 {
+    .index-hero-sect__title {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    margin: 20px 0 0 0;
+    text-transform: uppercase;
+    font: 12px/130% $ubuntu;
+  }
+
+  &__li {
+    display: flex;
+    align-items: flex-start;
+    &::before {
+      content: '';
+      // высоту строки / 2 чтобы отцентировать
+      margin: calc(1em * 1.3 / 2) 10px 0 0;
+      width: 20px;
+      height: 1px;
+      background: currentColor;
+      transform: translateY(-100%);
+    }
+    &:not(:last-child) {
+      margin: 0 0 15px;
+    }
+  }
+
 }
 
 .index-hero-sect,
