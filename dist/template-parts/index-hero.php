@@ -28,7 +28,7 @@ if ( $section['v2'] ) {
     <source media="(min-width:1919.98px)" type="image/jpeg" srcset="<?php echo $template_directory_uri ?>/img/<?php echo $img_name ?>-large.jpg">
     <img src="<?php echo $template_directory_uri ?>/img/<?php echo $img_name ?>.jpg" alt="#" class="index-hero-sect__img">
   </picture>
-  <h1 class="index-hero-sect__title sect-title"><?php echo $section['title'] ?></h1> <?php
+  <h2 class="index-hero-sect__title sect-title"><?php echo $section['title'] ?></h2> <?php
   echo $descr;
   echo do_shortcode( '[contact-form-7 id="' . $section['form']->ID . '" html_class="index-hero-sect__form form" html_id="hero-form"]' ) ?>
 </section>

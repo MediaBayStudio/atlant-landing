@@ -1,5 +1,5 @@
 <section class="index-features-sect sect container"<?php echo $section_id ?>>
-  <h1 class="index-features-sect__title sect-title sect-title-blue"><?php echo $section['title'] ?></h1>
+  <h2 class="index-features-sect__title sect-title sect-title-blue"><?php echo $section['title'] ?></h2>
   <ul class="index-features-sect__list"> <?php
     foreach ( $section['list'] as $li ) : ?>
       <li class="index-features-sect__feature lazy" data-src="#">
