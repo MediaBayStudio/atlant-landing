@@ -249,6 +249,31 @@
 
   for (var i = $forms.length - 1; i >= 0; i--) {
     if ($forms[i]) {
+      let ymReachGoal;
+
+      switch ($forms[i].id) {
+        case 'hero-form':
+        ymReachGoal = "ym(82213117,'reachGoal','submit_form_under_first_screen')";
+          break;
+        case 'quiz-form':
+        ymReachGoal = "ym(82213117,'reachGoal','submit_kviz')";
+          break;
+        case 'questions-form':
+        ymReachGoal = "ym(82213117,'reachGoal','questions')";
+          break;
+      }
+
+      if (ymReachGoal) {
+        ymReachGoal = new Function(ymReachGoal);
+      }
+
+      $forms[i].addEventListener('submit', function() {
+        sptRecordConversion(218);
+        if (ymReachGoal) {
+          ymReachGoal();
+        }
+      });
+
       formValidator({
         form: $forms[i],
         formBtn: q('button', $forms[i]),
