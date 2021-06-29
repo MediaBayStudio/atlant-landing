@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //=include ../blocks/index-quiz/index-quiz.js
 
+//=include ../blocks/thanks-popup/thanks-popup.js
+
 //=include ../blocks/footer/footer.js
 
 });

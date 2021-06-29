@@ -72,6 +72,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+
+  var wa_time_out, wa_time_in;
+
+  $(document).ready(function() {
+    var $waBtnPopup = $(".wa__btn_popup"),
+      $waPopupChatBox = $(".wa__popup_chat_box");
+
+    $waBtnPopup.on("click", function() {
+      if ($waPopupChatBox.hasClass("wa__active")) {
+        $waPopupChatBox.removeClass("wa__active");
+        $waBtnPopup.removeClass("wa__active");
+        clearTimeout(wa_time_in);
+        if ($waPopupChatBox.hasClass("wa__lauch")) {
+          wa_time_out = setTimeout(function() {
+            $waPopupChatBox.removeClass("wa__pending");
+            $waPopupChatBox.removeClass("wa__lauch");
+          }, 400);
+        }
+      } else {
+        $waPopupChatBox.addClass("wa__pending");
+        $waPopupChatBox.addClass("wa__active");
+        $waBtnPopup.addClass("wa__active");
+        clearTimeout(wa_time_out);
+        if (!$waPopupChatBox.hasClass("wa__lauch")) {
+          wa_time_in = setTimeout(function() {
+            $waPopupChatBox.addClass("wa__lauch");
+          }, 100);
+        }
+      }
+    });
+  });
+
   // настройки grab курсора на всех слайдерах
   // let slickLists = $('.slick-list.draggable');
 
