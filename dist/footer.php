@@ -39,7 +39,7 @@
         <div class="wa__popup_content wa__popup_content_left">
           <div class="wa__popup_content_list">
             <div class="wa__popup_content_item ">
-              <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsapp_number ?>&text=Здравствуйте, " class="wa__stt wa__stt_online">
+              <a target="_blank" href="https://api.whatsapp.com/send?phone=+79111075015&text=Здравствуйте, " class="wa__stt wa__stt_online">
                 <div class="wa__popup_avatar">
                   <div class="wa__cs_img_wrap lazy" data-src="url(<?php echo $template_directory_uri ?>/img/wa-img.jpg)"></div>
                 </div>
