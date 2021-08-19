@@ -18,16 +18,16 @@
       'SegoeUI-SemiBold.woff'
     ];
 
-    if ( is_page_template( 'index.php' ) || is_front_page() ) {
-      $style_name = 'style-index';
-      $script_name = 'script-index';
-    } else if ( is_page_template( 'index-v2.php' ) ) {
+    // if ( is_page_template( 'index.php' ) || is_front_page() ) {
+    //   $style_name = 'style-index';
+    //   $script_name = 'script-index';
+    // } else if ( is_page_template( 'index-v2.php' ) ) {
       $class = ' index-v2';
       $style_name = 'style-index-v2';
       $script_name = 'script-index-v2';
 
       $fonts[] = 'IntroBlack-Regular.woff';
-    }
+    // }
 
     $GLOBALS['page_script_name'] = $script_name;
     $GLOBALS['page_style_name'] = $style_name;

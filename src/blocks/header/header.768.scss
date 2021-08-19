@@ -8,6 +8,13 @@
 
   &__nav {}
 
+  &__tel {
+    &::before {
+      margin: 0 10px 0 0;
+      transform: none;
+    }
+  }
+
   &__tel,
   &__email {
     margin: 0 50px 0 0;

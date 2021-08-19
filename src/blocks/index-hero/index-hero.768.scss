@@ -9,7 +9,13 @@
   position: relative;
   color: $white;
 
+  &__text {
+    position: static;
+    padding: 0;
+  }
+
   &__pic {
+    left: 0;
     margin: 0;
     width: 100%;
     height: calc(100% - 140px - #{$sectionVerticalPadding768});
@@ -26,6 +32,10 @@
   &__descr {
     max-width: 355px;
   }
+
+  &__note {}
+
+  &__form-title {}
 
   &__form {
     margin-top: 50px;

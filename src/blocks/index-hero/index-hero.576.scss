@@ -5,9 +5,10 @@
 
 .index-hero-sect {
   &__pic {
-    margin: 0 0 10px $sectionHorizontalPaddingMinus576;
-    width: 100vw;
-    height: responsive('576->767', '240->325');
+    left: $sectionHorizontalPaddingMinus576;
+    // margin: 0 0 10px $sectionHorizontalPaddingMinus576;
+    // width: 100vw;
+    // height: responsive('576->767', '240->325');
   }
 
   &__img {}
@@ -15,6 +16,10 @@
   &__title {}
 
   &__descr {}
+
+  &__note {}
+
+  &__form-title {}
 
   &__form {
     .field_name {}

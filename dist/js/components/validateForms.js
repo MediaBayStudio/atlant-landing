@@ -172,7 +172,26 @@
           eventType = event.type;
 
         if (eventType === 'wpcf7mailsent') {
-          let $formElements = $form.elements;
+          let $formElements = $form.elements,
+            ct_site_id = '29802',
+            ct_data = {
+              fio: $form.name.value,
+              phoneNumber: $form.tel.value,
+              email: $form.email.value,
+              subject: $form['your-subject'],
+              sessionId: window.ct('calltracking_params', 's8r7mcml').sessionId
+            };
+
+          if ($form['quiz-result'].value) {
+            ct_data['comment'] = $form['quiz-result'].value;
+          }
+
+          jQuery.ajax({
+            url: 'https://api.calltouch.ru/calls-service/RestAPI/requests/' + ct_site_id + '/register/',
+            dataType: 'json',
+            type: 'POST',
+            data: ct_data
+          });
 
           for (let i = 0; i < $formElements.length; i++) {
             hideError($formElements[i]);
@@ -194,7 +213,7 @@
 
         $form.classList.remove('loading');
 
-        setTimeout(function(){
+        setTimeout(function() {
           $form.classList.remove('sent');
         }, 3000);
 
@@ -202,7 +221,6 @@
         thanksPopupTimer = setTimeout(function() {
           thanksPopup.closePopup();
         }, 3000);
-
 
       },
       toggleInputsClass = function() {
@@ -253,13 +271,13 @@
 
       switch ($forms[i].id) {
         case 'hero-form':
-        ymReachGoal = "ym(82213117,'reachGoal','submit_form_under_first_screen')";
+          ymReachGoal = "ym(82213117,'reachGoal','submit_form_under_first_screen')";
           break;
         case 'quiz-form':
-        ymReachGoal = "ym(82213117,'reachGoal','submit_kviz')";
+          ymReachGoal = "ym(82213117,'reachGoal','submit_kviz')";
           break;
         case 'questions-form':
-        ymReachGoal = "ym(82213117,'reachGoal','questions')";
+          ymReachGoal = "ym(82213117,'reachGoal','questions')";
           break;
       }
 
