@@ -49,9 +49,10 @@ add_action( 'wp_enqueue_scripts', function() {
 	enqueue_style( $style_name, $screen_widths );
 
   enqueue_style( 'hover', '' ); // подключаем стили для эффектов при наведении
+  enqueue_style( 'fancybox.min', '' );
 
   // Подключаем скрипты циклом
-	$scripts = ['lazy.min', 'Popup.min', 'slick.min', 'script', $script_name];
+	$scripts = ['lazy.min', 'fancybox.min', 'Popup.min', 'slick.min', 'script', $script_name];
 
   foreach ( $scripts as $script ) {
     wp_enqueue_script( "{$script}", $template_directory_uri . "/js/{$script}.js", [], null );
@@ -72,6 +73,7 @@ add_action( 'wp_enqueue_scripts', function() {
 // Убираем id и type в тегах script, добавляем нужным атрибут defer
   add_filter( 'script_loader_tag',   function( $html, $handle ) {
     switch ( $handle ) {
+      case 'fancybox.min':
       case 'lazy.min':
       case 'Popup.min':
       case 'slick.min':

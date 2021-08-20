@@ -6,16 +6,16 @@
   &__title {}
 
   &__list {
-    display: flex;
+    // display: flex;
   }
 
   &__feature {
-    flex-shrink: 0;
-    width: calc((100% - 90px) / 4);
+    // flex-shrink: 0;
+    // width: calc((100% - 90px) / 4);
 
     &::before {
-      width: 165px;
-      height: 145px;
+      // width: 165px;
+      // height: 145px;
     }
   }
 

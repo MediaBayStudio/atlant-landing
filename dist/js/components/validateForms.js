@@ -173,7 +173,7 @@
 
         if (eventType === 'wpcf7mailsent') {
           let $formElements = $form.elements,
-            ct_site_id = '29802',
+            ct_site_id = '44785',
             ct_data = {
               fio: $form.name.value,
               phoneNumber: $form.tel.value,
@@ -185,6 +185,8 @@
           if ($form['quiz-result'].value) {
             ct_data['comment'] = $form['quiz-result'].value;
           }
+
+          console.log(ct_data);
 
           jQuery.ajax({
             url: 'https://api.calltouch.ru/calls-service/RestAPI/requests/' + ct_site_id + '/register/',
